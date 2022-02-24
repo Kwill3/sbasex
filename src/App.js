@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Navbar from './Navbar';
+import './styles/styles.css';
+import Navbar from './components/Navbar';
 import Home from './routes/Home';
 import Destination from './routes/Destination';
 import Crew from './routes/Crew';
@@ -14,6 +15,14 @@ function App() {
         <Route path='destination' element={<Destination />} />
         <Route path='crew' element={<Crew />} />
         <Route path='technology' element={<Technology />} />
+        <Route 
+          path='*' 
+          element={
+            <main style={{ color: "white" }}>
+              <p>404 Page Not Found</p>
+            </main>
+          } 
+        />
       </Routes>
     </BrowserRouter>
   );

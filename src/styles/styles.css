@@ -1,0 +1,36 @@
+.navbar {
+  height: 88px;
+  display: flex;
+  flex-direction: row;
+}
+.navbar-logo {
+  flex: auto;
+}
+.navbar-logo img {
+  height: 40px;
+  width: 40px;
+  margin: 24px 0 0 24px;
+}
+@media screen and (max-width: 700px) {
+  .navbar-links {
+    display: none;
+  }
+}
+.navbar-links .active {
+  color: #FFFFFF;
+}
+.navbar-hamburger img {
+  height: 21px;
+  width: 24px;
+  margin: 33px 24px 0 0;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Bellefair", sans-serif;
+}
+
+body {
+  background-color: #0B0D17;
+  color: #FFFFFF;
+}/*# sourceMappingURL=styles.css.map */

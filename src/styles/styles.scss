@@ -1,0 +1,17 @@
+@import '../variables/colors';
+@import '../variables/fonts';
+@import '../styles/navbar';
+@import '../styles/home';
+@import '../styles/destination';
+@import '../styles/crew';
+@import '../styles/technology';
+
+* {
+    box-sizing: border-box;
+    font-family: 'Bellefair', sans-serif;
+}
+
+body {
+    background-color: $dark;
+    color: $light;
+}

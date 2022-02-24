@@ -1,0 +1,32 @@
+@import '../variables/colors';
+@import '../variables/fonts';
+@import '../variables/media-queries';
+
+.navbar {
+    height: 88px;
+    display: flex;
+    flex-direction: row;
+    &-logo {
+        flex: auto;
+        & img {
+            height: 40px;
+            width: 40px;
+            margin: 24px 0 0 24px;
+        }
+    }
+    &-links {
+        @include mobile {
+            display: none;
+        }
+        .active {
+            color: $light;
+        }
+    }
+    &-hamburger {
+        & img {
+            height: 21px;
+            width: 24px;
+            margin: 33px 24px 0 0;
+        }
+    }
+}
