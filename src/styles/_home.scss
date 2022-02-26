@@ -1,3 +1,127 @@
 @import '../variables/colors';
 @import '../variables/fonts';
 @import '../variables/media-queries';
+
+.home {
+    background-image: url('../../public/assets/home/background-home-mobile.jpg');
+    background-position: bottom center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-width: 320px;
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    @include tablet {
+        background-image: url('../../public/assets/home/background-home-tablet.jpg');
+    }
+    @include desktop {
+        background-image: url('../../public/assets/home/background-home-desktop.jpg');
+        flex-direction: row;
+        align-items: flex-end;
+        padding: 0 165px 131px 165px;
+    }
+
+    &-text {
+        @include desktop {
+            display: flex;
+            flex-direction: column;
+            flex: auto;
+        }
+        & h1 {
+            display: flex;
+            flex-direction: column;
+            color: $blue;
+            font-family: $heading-barcon;
+            font-size: $nav-text-size;
+            line-height: 19px;
+            text-align: center;
+            letter-spacing: $nav-text-space;
+            margin: 112px 24px 0 24px;
+            @include tablet {
+                width: 450px;
+                margin: 202px auto 0 auto;
+                font-size: 20px;
+                line-height: 24px;
+                letter-spacing: 3.375px;
+            }
+            @include desktop {
+                font-size: $heading5-size;
+                line-height: 34px;
+                letter-spacing: 4.725px;
+                text-align: left;
+                margin: 0;
+            }
+            & em {
+                color: $light;
+                font-family: $heading-bell;
+                font-size: 80px;
+                line-height: 100px;
+                text-align: center;
+                margin: 16px 24px;
+                @include tablet {
+                    width: 450px;
+                    font-size: $heading1-size;
+                    line-height: $heading1-size;
+                    margin: 24px auto;
+                }
+                @include desktop {
+                    line-height: 172px;
+                    text-align: left;
+                }
+            }
+        }
+        & h2 {
+            color: $blue;
+            font-family: $heading-bar;
+            font-size: 15px;
+            line-height: 25px;
+            text-align: center;
+            margin: 0 24px 81px 24px;
+            @include tablet {
+                width: 450px;
+                font-size: $nav-text-size;
+                line-height: $heading5-size;
+                margin: 0 auto 156px auto;
+            }
+            @include desktop {
+                font-size: 18px;
+                line-height: 32px;
+                text-align: left;
+                margin: 0;
+            }
+        }
+    }
+    & button {
+        margin: 0 auto 50px auto;
+        width: 150px;
+        height: 150px;
+        padding: 68px 27.5px 59px 29.5px;
+        font-family: $heading-bell;
+        font-size: 20px;
+        line-height: 23px;
+        letter-spacing: 1.25px;
+        color: $dark;
+        border: 1px solid #000000;
+        border-radius: 150px;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        @include tablet {
+            margin: 0 auto 90px auto;
+            width: 242px;
+            height: 242px;
+            padding: 103px 48px 102px 46px;
+            font-size: $heading4-size;
+            line-height: 37px;
+            letter-spacing: 2px;
+            border: none;
+            filter: none;
+            background-color: $light;
+        }
+        @include desktop {
+            margin: 0;
+            width: 274px;
+            height: 274px;
+            padding: 119px 64px 118px 62px;
+        }
+    }
+}

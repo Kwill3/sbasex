@@ -4,25 +4,87 @@
 
 .navbar {
     height: 88px;
+    position: absolute;
+    top: 0;
+    min-width: 320px;
+    width: 100%;
     display: flex;
     flex-direction: row;
+    @include tablet {
+        right: 0;
+        height: 96px;
+        width: 95%;
+        align-items: center;
+    }
+    @include desktop {
+        top: 40px;
+        width: 96.18%;
+    }
+
     &-logo {
         flex: auto;
         & img {
             height: 40px;
             width: 40px;
             margin: 24px 0 0 24px;
+            @include tablet {
+                height: 48px;
+                width: 48px;
+                margin: 0;
+            }
         }
     }
     &-links {
-        @include mobile {
-            display: none;
+        display: none;
+        font-family: $heading-barcon;
+        background: rgba(255, 255, 255, 0.04);
+        backdrop-filter: blur(81.5485px);
+        @include tablet {
+            display: flex;
+            justify-content: space-around;
+            padding-top: 39px;
+            width: 450px;
+            height: 96px;
+            & > * {
+                color: $light;
+                text-decoration: none;
+                font-size: $subheading2-size;
+                line-height: 17px;
+                letter-spacing: 2.3625px;
+            }
+        }
+        @include desktop {
+            padding: 39px 165px 0 123px;
+            width: 830px;
+            & > * {
+                font-size: $nav-text-size;
+                line-height: 19px;
+                letter-spacing: $nav-text-space;
+            }
+        }
+        & em {
+            @include tablet {
+                display: none;
+            }
+            @include desktop {
+                display: inline;
+                color: $light;
+                font-family: $heading-barcon;
+                font-weight: bold;
+                font-size: $nav-text-size;
+                line-height: 19px;
+                letter-spacing: $nav-text-space;
+            }
         }
         .active {
-            color: $light;
+            border-bottom: 3px solid $light;
         }
     }
     &-hamburger {
+        display: none;
+        @include mobile {
+            display: inline;
+        }
         & img {
             height: 21px;
             width: 24px;
