@@ -6,7 +6,7 @@ function Home() {
       <div className="home-text">
         <h1>
             SO, YOU WANT TO TRAVEL TO
-            <em>SPACE</em>
+            <span>SPACE</span>
         </h1>
         <h2>
             Let's face it; if you want to go to space, you might as well genuinely go to 

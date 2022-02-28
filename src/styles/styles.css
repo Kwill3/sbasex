@@ -71,12 +71,12 @@
   }
 }
 @media screen and (min-width: 501px) {
-  .navbar-links em {
+  .navbar-links span {
     display: none;
   }
 }
 @media screen and (min-width: 1000px) {
-  .navbar-links em {
+  .navbar-links span {
     display: inline;
     color: #FFFFFF;
     font-family: "Barlow Condensed", sans-serif;
@@ -104,9 +104,15 @@
 }
 
 .home {
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+.home {
   background-image: url("../../public/assets/home/background-home-mobile.jpg");
   background-position: bottom center;
-  background-size: cover;
   display: flex;
   flex-direction: column;
   min-width: 320px;
@@ -163,7 +169,7 @@
     margin: 0;
   }
 }
-.home-text h1 em {
+.home-text h1 span {
   color: #FFFFFF;
   font-family: "Bellefair", serif;
   font-size: 80px;
@@ -172,7 +178,7 @@
   margin: 16px 24px;
 }
 @media screen and (min-width: 501px) {
-  .home-text h1 em {
+  .home-text h1 span {
     width: 450px;
     font-size: 150px;
     line-height: 150px;
@@ -180,7 +186,7 @@
   }
 }
 @media screen and (min-width: 1000px) {
-  .home-text h1 em {
+  .home-text h1 span {
     line-height: 172px;
     text-align: left;
   }

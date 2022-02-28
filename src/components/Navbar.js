@@ -12,19 +12,19 @@ function Navbar() {
             </div>
             <div className="navbar-links">
                 <NavLink className={activeNav} to="/">
-                    <em>00 </em>
+                    <span>00 </span>
                     HOME
                 </NavLink>
                 <NavLink className={activeNav} to="/destination">
-                    <em>01 </em>
+                    <span>01 </span>
                     DESTINATION
                 </NavLink>
                 <NavLink className={activeNav} to="/crew">
-                    <em>02 </em>
+                    <span>02 </span>
                     CREW
                 </NavLink>
                 <NavLink className={activeNav} to="/technology">
-                    <em>03 </em>
+                    <span>03 </span>
                     TECHNOLOGY
                 </NavLink>
             </div>
