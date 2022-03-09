@@ -7,7 +7,7 @@ function Crew() {
       <div className="crew-bg"></div>
       <div className='grid-crew'>
         <h3 className='grid-crew-header'>
-          <span>02 </span>
+          <span>02</span>
           MEET YOUR CREW
         </h3>
         <picture className='grid-crew-picture'>

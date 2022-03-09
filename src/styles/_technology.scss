@@ -1,3 +1,211 @@
 @import '../variables/colors';
 @import '../variables/fonts';
 @import '../variables/media-queries';
+
+%bgSize {
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+.tech-bg {
+    background-image: url('../../public/assets/technology/background-technology-mobile.jpg');
+    @extend %bgSize;
+    background-repeat: no-repeat;
+    background-position: center center;
+    mix-blend-mode: screen;
+    opacity: 0.55;
+    min-width: 330px;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+    @include tablet {
+        min-height: 900px;
+        background-image: url('../../public/assets/technology/background-technology-tablet.jpg');
+    }
+    @include desktop {
+        background-image: url('../../public/assets/technology/background-technology-desktop.jpg');
+    }
+}
+
+.grid-tech {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
+    grid-template-areas:
+        "header"
+        "picture"
+        "nav"
+        "text";
+    @include desktop {
+        grid-template-columns: 325px 1fr 1fr;
+        grid-template-areas:
+            "header header header"
+            "nav text picture";
+    }
+    &-header {
+        grid-area: header;
+        margin: 88px auto 32px;
+        text-align: center;
+        font-family: $heading-barcon;
+        font-size: $nav-text-size;
+        line-height: 19px;
+        letter-spacing: $nav-text-space;
+        color: $light;
+        @include tablet {
+            margin: 136px auto 60px 38.5px;
+            font-size: 20px;
+            line-height: 24px;
+            letter-spacing: 3.375px;
+        }
+        @include desktop {
+            margin: 212px auto 26px 166px;
+            font-size: $heading5-size;
+            line-height: 34px;
+            letter-spacing: 4.725px;
+        }
+        & span {
+            font-weight: bold;
+            opacity: 0.25;
+            margin-right: 16px;
+            @include desktop {
+                margin-right: 24px;
+            }
+        }
+    }
+    &-picture {
+        grid-area: picture;
+        & img {
+            width: 100%;
+            height: 170px;
+            object-fit: cover;
+            @include tablet {
+                height: 310px;
+            }
+            @include desktop {
+                width: 35.7vw;
+                height: auto;
+                margin-left: 130px;
+            }
+        }
+    }
+    &-nav {
+        grid-area: nav;
+        width: 170px;
+        height: 40px;
+        margin: 34px auto 0;
+        @include tablet {
+            width: 228px;
+            height: 60px;
+            margin-top: 56px;
+        }
+        @include desktop {
+            display: flex;
+            flex-direction: column;
+            margin: auto 0 auto 166px;
+            width: 80px;
+            height: 336px;
+        }
+        & button {
+            width: 40px;
+            height: 40px;
+            border-radius: 40px;
+            border: 1px solid #ffffff50;
+            margin: 0 8px;
+            color: $light;
+            background-color: rgba(0, 0, 0, 0);
+            font-family: $heading-bell;
+            font-size: $nav-text-size;
+            line-height: 18px;
+            text-align: center;
+            letter-spacing: 1px;
+            @include tablet {
+                width: 60px;
+                height: 60px;
+                border-radius: 60px;
+                font-size: 24px;
+                line-height: $heading5-size;
+                letter-spacing: 1.5px;
+            }
+            @include desktop {
+                width: 80px;
+                height: 80px;
+                border-radius: 80px;
+                margin: 16px 0;
+                font-size: $heading4-size;
+                line-height: 37px;
+                letter-spacing: 2px;
+            }
+            &.active {
+                color: $dark;
+                background-color: $light;
+            }
+        }
+    }
+    &-text {
+        grid-area: text;
+        margin: 26px 24px 81px;
+        text-align: center;
+        color: $blue;
+        @include tablet {
+            margin: 44px auto;
+            width: 60%;
+            height: auto;
+        }
+        @include desktop {
+            margin: auto 0;
+            text-align: left;
+            width: 100%;
+        }
+        &-title {
+            font-family: $heading-barcon;
+            font-size: 14px;
+            line-height: 17px;
+            letter-spacing: 2.3625px;
+            margin-bottom: 9px;
+            @include tablet {
+                font-size: 16px;
+                line-height: 19px;
+                letter-spacing: $nav-text-space;
+                margin-bottom: 16px;
+            }
+            @include desktop {
+                margin-bottom: 11px;
+            }
+        }
+        &-name {
+            font-family: $heading-bell;
+            font-size: 24px;
+            line-height: 28px;
+            text-transform: uppercase;
+            color: $light;
+            margin-bottom: 16px;
+            @include tablet {
+                font-size: 40px;
+                line-height: 46px;
+            }
+            @include desktop {
+                font-size: $heading3-size;
+                line-height: 64px;
+                margin-bottom: 17px;
+            }
+        }
+        &-desc {
+            font-family: $heading-bar;
+            font-size: 15px;
+            line-height: 25px;
+            @include tablet {
+                font-size: $nav-text-size;
+                line-height: $heading5-size;
+            }
+            @include desktop {
+                font-size: 18px;
+                line-height: $heading4-size;
+            }
+        }
+    }
+}

@@ -83,6 +83,10 @@
         & span {
             opacity: 0.25;
             font-weight: bold;
+            margin-right: 16px;
+            @include desktop {
+                margin-right: 24px;
+            }
         }
     }
     &-picture {
