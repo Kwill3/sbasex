@@ -1,3 +1,285 @@
 @import '../variables/colors';
 @import '../variables/fonts';
 @import '../variables/media-queries';
+
+%bgSize {
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+.dest-bg {
+    background-image: url('../../public/assets/destination/background-destination-mobile.jpg');
+    @extend %bgSize;
+    background-repeat: no-repeat;
+    background-position: center center;
+    mix-blend-mode: screen;
+    opacity: 0.5;
+    min-width: 330px;
+    width: 100%;
+    height: 100vh;
+    min-height: 850px;
+    position: absolute;
+    z-index: -1;
+    @include tablet {
+        min-height: 1024px;
+        background-image: url('../../public/assets/destination/background-destination-tablet.jpg');
+    }
+    @include desktop {
+        min-height: 900px;
+        background-image: url('../../public/assets/destination/background-destination-desktop.jpg');
+    }
+}
+
+.destination {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    &-header {
+        margin: 88px auto 32px;
+        font-family: $heading-barcon;
+        font-size: $nav-text-size;
+        line-height: 19px;
+        letter-spacing: 2.7px;
+        text-transform: uppercase;
+        color: $light;
+        @include tablet {
+            margin: 136px auto 60px 38.5px;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            letter-spacing: 3.375px;
+        }
+        @include desktop {
+            margin: 212px auto 64px 166.5px;
+            font-size: $heading5-size;
+            line-height: 34px;
+            letter-spacing: 4.725px;
+        }
+        & span {
+            font-weight: bold;
+            opacity: 0.25;
+            margin-right: 18px;
+            @include tablet {
+                font-weight: 700;
+                margin-right: 19px;
+            }
+            @include desktop {
+                margin-right: 28px;
+            }
+        }
+    }
+    &-info {
+        @include desktop {
+            display: flex;
+            flex-direction: row;
+        }
+        &-picture {
+            display: flex;
+            flex: auto;
+            justify-content: center;
+            margin: 0 auto;
+            @include desktop {
+                margin: 33px 0 0 230px;
+                justify-content: left;
+            }
+            & img {
+                width: 170px;
+                height: 170px;
+                @include tablet {
+                    width: 300px;
+                    height: 300px;
+                }
+                @include desktop {
+                    width: 445px;
+                    height: 445px;
+                }
+            }
+        }
+        &-text {
+            @include desktop {
+                flex: auto;
+                width: 445px;
+                height: 472px;
+            }
+            &-links {
+                display: flex;
+                justify-content: space-between;
+                width: 237.5px;
+                height: 28px;
+                margin: 26px auto 20px;
+                @include tablet {
+                    width: 285.5px;
+                    height: 34px;
+                    margin: 53px auto 32px;
+                }
+                @include desktop {
+                    width: 285.5px;
+                    height: 34px;
+                    margin: 0 0 37px;
+                }
+                & > * {
+                    text-decoration: none;
+                    font-family: $heading-barcon;
+                    font-size: 14px;
+                    line-height: 17px;
+                    letter-spacing: 2.3625px;
+                    color: $blue;
+                    text-transform: uppercase;
+                    &.active {
+                        color: $light;
+                    }
+                    @include tablet {
+                        font-weight: 400;
+                        font-size: $nav-text-size;
+                        line-height: 19px;
+                        letter-spacing: $nav-text-space;
+                    }
+                }
+            }
+            &-title {
+                display: flex;
+                justify-content: center;
+                font-family: $heading-bell;
+                font-size: $heading3-size;
+                line-height: 64px;
+                text-align: center;
+                text-transform: uppercase;
+                color: $light;
+                @include tablet {
+                    font-weight: 400;
+                    font-size: 80px;
+                    line-height: 92px;
+                }
+                @include desktop {
+                    justify-content: left;
+                    font-size: $heading2-size;
+                    line-height: 115px;
+                    text-align: left;
+                }
+            }
+            &-desc {
+                display: flex;
+                justify-content: center;
+                width: 87.2%;
+                font-family: $heading-bar;
+                font-size: 15px;
+                line-height: 25px;
+                text-align: center;
+                color: $blue;
+                margin: 1px auto 32px;
+                @include tablet {
+                    width: 74.6%;
+                    font-weight: 400;
+                    font-size: $nav-text-size;
+                    line-height: $subheading1-size;
+                    margin: 8px auto 49px;
+                }
+                @include desktop {
+                    justify-content: left;
+                    width: 445px;
+                    font-size: 18px;
+                    line-height: $heading4-size;
+                    text-align: left;
+                    margin: 14px auto 54px 0;
+                }
+            }
+            & hr {
+                border: 0;
+                border-top: 1px solid #383B4B;
+                width: 87.2%;
+                @include tablet {
+                    width: 74.6%;
+                }
+                @include desktop {
+                    width: 445px;
+                    margin: 0;
+                }
+            }
+            &-data {
+                text-align: center;
+                text-transform: uppercase;
+                color: $light;
+                @include tablet {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-evenly;
+                    width: 74.6%;
+                    margin: 28px auto;
+                }
+                @include desktop {
+                    justify-content: flex-start;
+                    text-align: left;
+                    margin: 28px auto 50px 0;
+                }
+                &-dist {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 32px auto;
+                    @include tablet {
+                        margin: 0;
+                    }
+                    @include desktop {
+                        align-items: baseline;
+                    }
+                    & h5 {
+                        font-family: $heading-barcon;
+                        font-size: 14px;
+                        line-height: 17px;
+                        letter-spacing: 2.3625px;
+                        color: $blue;
+                        margin-bottom: 12px;
+                        @include tablet {
+                            font-weight: 400;
+                        }
+                    }
+                    & p {
+                        font-family: $heading-bell;
+                        font-size: $heading5-size;
+                        line-height: $heading4-size;
+                        @include tablet {
+                            font-weight: 400;
+                        }
+                    }
+                }
+                &-time {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 0 auto 58px;
+                    @include tablet {
+                        margin: 0;
+                    }
+                    @include desktop {
+                        align-items: baseline;
+                        margin-left: 79px;
+                    }
+                    & h5 {
+                        font-family: $heading-barcon;
+                        font-size: 14px;
+                        line-height: 17px;
+                        letter-spacing: 2.3625px;
+                        color: $blue;
+                        margin-bottom: 12px;
+                        @include tablet {
+                            font-weight: 400;
+                        }
+                    }
+                    & p {
+                        font-family: $heading-bell;
+                        font-size: $heading5-size;
+                        line-height: $heading4-size;
+                        @include tablet {
+                            font-weight: 400;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
