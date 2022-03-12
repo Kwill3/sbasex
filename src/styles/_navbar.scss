@@ -6,6 +6,7 @@
     height: 88px;
     position: absolute;
     top: 0;
+    z-index: 1;
     min-width: 320px;
     width: 100%;
     display: flex;
@@ -36,21 +37,45 @@
     }
     &-links {
         display: none;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        width: 254px;
+        height: 100vh;
         font-family: $heading-barcon;
         background: rgba(255, 255, 255, 0.04);
         backdrop-filter: blur(81.5485px);
+        & > * {
+            color: $light;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: $nav-text-size;
+            line-height: 19px;
+            letter-spacing: 2.7px;
+            margin: 0 0 32px 32px;
+        }
+        &-close {
+            margin: 33.95px 26.45px 64.95px auto;
+            @include tablet {
+                display: none;
+            }
+        }
+        &.active {
+            display: flex;
+        }
         @include tablet {
             display: flex;
+            flex-direction: row;
+            position: static;
             justify-content: space-around;
             padding-top: 39px;
             width: 450px;
             height: 96px;
             & > * {
-                color: $light;
-                text-decoration: none;
                 font-size: $subheading2-size;
                 line-height: 17px;
                 letter-spacing: 2.3625px;
+                margin: 0;
             }
         }
         @include desktop {
@@ -63,21 +88,27 @@
             }
         }
         & span {
+            color: $light;
+            font-family: $heading-barcon;
+            font-weight: 700;
+            font-size: $nav-text-size;
+            line-height: 19px;
+            letter-spacing: $nav-text-space;
+            margin-right: 12px;
             @include tablet {
                 display: none;
             }
             @include desktop {
                 display: inline;
-                color: $light;
-                font-family: $heading-barcon;
                 font-weight: bold;
-                font-size: $nav-text-size;
-                line-height: 19px;
-                letter-spacing: $nav-text-space;
             }
         }
         .active {
-            border-bottom: 3px solid $light;
+            border-right: 3px solid $light;
+            @include tablet {
+                border: 0px;
+                border-bottom: 3px solid $light;
+            }
         }
     }
     &-hamburger {

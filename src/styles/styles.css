@@ -2,6 +2,7 @@
   height: 88px;
   position: absolute;
   top: 0;
+  z-index: 1;
   min-width: 320px;
   width: 100%;
   display: flex;
@@ -38,25 +39,51 @@
 }
 .navbar-links {
   display: none;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+  width: 254px;
+  height: 100vh;
   font-family: "Barlow Condensed", sans-serif;
   background: rgba(255, 255, 255, 0.04);
   -webkit-backdrop-filter: blur(81.5485px);
           backdrop-filter: blur(81.5485px);
 }
+.navbar-links > * {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 2.7px;
+  margin: 0 0 32px 32px;
+}
+.navbar-links-close {
+  margin: 33.95px 26.45px 64.95px auto;
+}
+@media screen and (min-width: 501px) {
+  .navbar-links-close {
+    display: none;
+  }
+}
+.navbar-links.active {
+  display: flex;
+}
 @media screen and (min-width: 501px) {
   .navbar-links {
     display: flex;
+    flex-direction: row;
+    position: static;
     justify-content: space-around;
     padding-top: 39px;
     width: 450px;
     height: 96px;
   }
   .navbar-links > * {
-    color: #FFFFFF;
-    text-decoration: none;
     font-size: 14px;
     line-height: 17px;
     letter-spacing: 2.3625px;
+    margin: 0;
   }
 }
 @media screen and (min-width: 1000px) {
@@ -70,6 +97,15 @@
     letter-spacing: 2.7px;
   }
 }
+.navbar-links span {
+  color: #FFFFFF;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 2.7px;
+  margin-right: 12px;
+}
 @media screen and (min-width: 501px) {
   .navbar-links span {
     display: none;
@@ -78,16 +114,17 @@
 @media screen and (min-width: 1000px) {
   .navbar-links span {
     display: inline;
-    color: #FFFFFF;
-    font-family: "Barlow Condensed", sans-serif;
     font-weight: bold;
-    font-size: 16px;
-    line-height: 19px;
-    letter-spacing: 2.7px;
   }
 }
 .navbar-links .active {
-  border-bottom: 3px solid #FFFFFF;
+  border-right: 3px solid #FFFFFF;
+}
+@media screen and (min-width: 501px) {
+  .navbar-links .active {
+    border: 0px;
+    border-bottom: 3px solid #FFFFFF;
+  }
 }
 .navbar-hamburger {
   display: none;
@@ -1086,5 +1123,4 @@
 body {
   background-color: #0B0D17;
   color: #FFFFFF;
-  min-width: 320px;
 }/*# sourceMappingURL=styles.css.map */
