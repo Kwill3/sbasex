@@ -35,6 +35,15 @@
             }
         }
     }
+    &-line {
+        @include desktop {
+            position: absolute;
+            height: 1px;
+            width: calc(100% - 167px - 730px);
+            margin-left: 112px;
+            background: #383B4B;
+        }
+    }
     &-links {
         display: none;
         flex-direction: column;

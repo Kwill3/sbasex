@@ -15,6 +15,7 @@ function Navbar() {
             <div className="navbar-logo" onClick={handleClick}>
                 <img src="./assets/shared/logo.svg" alt="logo" />
             </div>
+            <div className="navbar-line"></div>
             <div className="navbar-links">
                 <div className="navbar-links-close" onClick={handleClick}>
                     <img src="./assets/shared/icon-close.svg" alt="close" />

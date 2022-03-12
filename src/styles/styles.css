@@ -37,6 +37,15 @@
     margin: 0;
   }
 }
+@media screen and (min-width: 1000px) {
+  .navbar-line {
+    position: absolute;
+    height: 1px;
+    width: calc(100% - 167px - 730px);
+    margin-left: 112px;
+    background: #383B4B;
+  }
+}
 .navbar-links {
   display: none;
   flex-direction: column;
