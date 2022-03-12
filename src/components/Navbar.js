@@ -6,7 +6,6 @@ function Navbar() {
     const activeNav = ({ isActive }) => isActive ? 'active' : 'inactive';
 
     let handleClick = () => {
-        console.log('click');
         document.getElementsByClassName("navbar-links")[0].classList.toggle('active');
     }
 
@@ -20,19 +19,19 @@ function Navbar() {
                 <div className="navbar-links-close" onClick={handleClick}>
                     <img src="./assets/shared/icon-close.svg" alt="close" />
                 </div>
-                <NavLink className={activeNav} to="/">
+                <NavLink className={activeNav} onClick={handleClick} to="/">
                     <span>00</span>
                     HOME
                 </NavLink>
-                <NavLink className={activeNav} to="/destination">
+                <NavLink className={activeNav} onClick={handleClick} to="/destination">
                     <span>01</span>
                     DESTINATION
                 </NavLink>
-                <NavLink className={activeNav} to="/crew">
+                <NavLink className={activeNav} onClick={handleClick} to="/crew">
                     <span>02</span>
                     CREW
                 </NavLink>
-                <NavLink className={activeNav} to="/technology">
+                <NavLink className={activeNav} onClick={handleClick} to="/technology">
                     <span>03</span>
                     TECHNOLOGY
                 </NavLink>
