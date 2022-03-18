@@ -28,14 +28,14 @@
         flex-direction: row;
         justify-content: center;
         align-items: flex-end;
-        padding: 0 165px 131px 165px;
+        padding: 0 77px 43px 165px;
     }
 
     &-text {
         @include desktop {
             display: flex;
             flex-direction: column;
-            margin-right: 386px;
+            margin: 0 298px 88px 0;
         }
         & h1 {
             display: flex;
@@ -101,40 +101,55 @@
             }
         }
     }
-    & button {
+    &-button {
         margin: 0 auto 50px auto;
-        width: 150px;
-        height: 150px;
-        padding: 68px 27.5px 59px 29.5px;
-        font-family: $heading-bell;
-        font-size: 20px;
-        line-height: 23px;
-        letter-spacing: 1.25px;
-        color: $dark;
-        border: 1px solid #000000;
-        border-radius: 150px;
-        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
         @include tablet {
             margin: 0 auto 90px auto;
-            width: 242px;
-            height: 242px;
-            padding: 103px 48px 102px 46px;
-            font-size: $heading4-size;
-            line-height: 37px;
-            letter-spacing: 2px;
-            border: none;
-            filter: none;
-            background-color: $light;
         }
         @include desktop {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             margin: 0;
-            width: 274px;
-            height: 274px;
-            padding: 119px 64px 118px 62px;
-            cursor: pointer;
-            // &:hover {
-            //     border-bottom: 3px solid #ffffff50;
-            // }
+            width: 450px;
+            height: 450px;
+            border-radius: 450px;
+            padding: 0 176px;
+            &.active{
+                background-color: #ffffff10;
+            }
+        }
+        & button {
+            width: 150px;
+            height: 150px;
+            padding: 68px 27.5px 59px 29.5px;
+            font-family: $heading-bell;
+            font-size: 20px;
+            line-height: 23px;
+            letter-spacing: 1.25px;
+            color: $dark;
+            border: 1px solid #000000;
+            border-radius: 150px;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+            @include tablet {
+                width: 242px;
+                height: 242px;
+                padding: 103px 48px 102px 46px;
+                font-size: $heading4-size;
+                line-height: 37px;
+                letter-spacing: 2px;
+                border: none;
+                border-radius: 242px;
+                filter: none;
+                background-color: $light;
+            }
+            @include desktop {
+                width: 274px;
+                height: 274px;
+                border-radius: 274px;
+                padding: 119px 64px 118px 62px;
+                cursor: pointer;
+            }
         }
     }
 }

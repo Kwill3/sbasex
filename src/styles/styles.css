@@ -182,14 +182,14 @@
     flex-direction: row;
     justify-content: center;
     align-items: flex-end;
-    padding: 0 165px 131px 165px;
+    padding: 0 77px 43px 165px;
   }
 }
 @media screen and (min-width: 1000px) {
   .home-text {
     display: flex;
     flex-direction: column;
-    margin-right: 386px;
+    margin: 0 298px 88px 0;
   }
 }
 .home-text h1 {
@@ -267,8 +267,30 @@
     margin: 0;
   }
 }
-.home button {
+.home-button {
   margin: 0 auto 50px auto;
+}
+@media screen and (min-width: 501px) {
+  .home-button {
+    margin: 0 auto 90px auto;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .home-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    width: 450px;
+    height: 450px;
+    border-radius: 450px;
+    padding: 0 176px;
+  }
+  .home-button.active {
+    background-color: #ffffff10;
+  }
+}
+.home-button button {
   width: 150px;
   height: 150px;
   padding: 68px 27.5px 59px 29.5px;
@@ -282,8 +304,7 @@
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 @media screen and (min-width: 501px) {
-  .home button {
-    margin: 0 auto 90px auto;
+  .home-button button {
     width: 242px;
     height: 242px;
     padding: 103px 48px 102px 46px;
@@ -291,15 +312,16 @@
     line-height: 37px;
     letter-spacing: 2px;
     border: none;
+    border-radius: 242px;
     filter: none;
     background-color: #FFFFFF;
   }
 }
 @media screen and (min-width: 1000px) {
-  .home button {
-    margin: 0;
+  .home-button button {
     width: 274px;
     height: 274px;
+    border-radius: 274px;
     padding: 119px 64px 118px 62px;
     cursor: pointer;
   }
