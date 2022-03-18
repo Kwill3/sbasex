@@ -104,7 +104,7 @@
                 width: 445px;
                 height: 472px;
             }
-            &-links {
+            &-nav {
                 display: flex;
                 justify-content: space-between;
                 width: 237.5px;
@@ -120,16 +120,23 @@
                     height: 34px;
                     margin: 0 0 37px;
                 }
-                & > * {
-                    text-decoration: none;
+                &-link {
                     font-family: $heading-barcon;
                     font-size: 14px;
                     line-height: 17px;
                     letter-spacing: 2.3625px;
                     color: $blue;
                     text-transform: uppercase;
+                    cursor: pointer;
                     &.active {
                         color: $light;
+                        border-bottom: 3px solid $light;
+                    }
+                    &:hover {
+                        border-bottom: 3px solid #ffffff50;
+                        &.active {
+                            border-bottom: 3px solid $light;
+                        }
                     }
                     @include tablet {
                         font-weight: 400;

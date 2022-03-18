@@ -54,6 +54,18 @@
         font-family: $heading-barcon;
         background: rgba(255, 255, 255, 0.04);
         backdrop-filter: blur(81.5485px);
+        .active {
+            border-right: 3px solid $light;
+            @include tablet {
+                border: 0px;
+                border-bottom: 3px solid $light;
+            }
+        }
+        .inactive {
+            &:hover {
+                border-bottom: 3px solid #ffffff50;
+            }
+        }
         & > * {
             color: $light;
             text-decoration: none;
@@ -71,6 +83,22 @@
         }
         &.active {
             display: flex;
+        }
+        & span {
+            color: $light;
+            font-family: $heading-barcon;
+            font-weight: 700;
+            font-size: $nav-text-size;
+            line-height: 19px;
+            letter-spacing: $nav-text-space;
+            margin-right: 12px;
+            @include tablet {
+                display: none;
+            }
+            @include desktop {
+                display: inline;
+                font-weight: bold;
+            }
         }
         @include tablet {
             display: flex;
@@ -91,32 +119,10 @@
             padding: 39px 165px 0 123px;
             width: 830px;
             & > * {
+                cursor: pointer;
                 font-size: $nav-text-size;
                 line-height: 19px;
                 letter-spacing: $nav-text-space;
-            }
-        }
-        & span {
-            color: $light;
-            font-family: $heading-barcon;
-            font-weight: 700;
-            font-size: $nav-text-size;
-            line-height: 19px;
-            letter-spacing: $nav-text-space;
-            margin-right: 12px;
-            @include tablet {
-                display: none;
-            }
-            @include desktop {
-                display: inline;
-                font-weight: bold;
-            }
-        }
-        .active {
-            border-right: 3px solid $light;
-            @include tablet {
-                border: 0px;
-                border-bottom: 3px solid $light;
             }
         }
     }

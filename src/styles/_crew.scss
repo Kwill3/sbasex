@@ -129,17 +129,18 @@
             width: 132px;
             margin: 0 auto 95px 165px;
         }
-        & button {
+        &-button {
             width: 10px;
             height: 10px;
             border-radius: 10px;
             border: none;
             background: #FFFFFF;
             opacity: 0.17;
+            cursor: pointer;
             & span {
                 display: none;
             }
-            &.active {
+            &:nth-child(1) {
                 opacity: 1;
             }
             @include desktop {

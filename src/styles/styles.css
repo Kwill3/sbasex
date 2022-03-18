@@ -58,6 +58,18 @@
   -webkit-backdrop-filter: blur(81.5485px);
           backdrop-filter: blur(81.5485px);
 }
+.navbar-links .active {
+  border-right: 3px solid #FFFFFF;
+}
+@media screen and (min-width: 501px) {
+  .navbar-links .active {
+    border: 0px;
+    border-bottom: 3px solid #FFFFFF;
+  }
+}
+.navbar-links .inactive:hover {
+  border-bottom: 3px solid #ffffff50;
+}
 .navbar-links > * {
   color: #FFFFFF;
   text-decoration: none;
@@ -77,6 +89,26 @@
 }
 .navbar-links.active {
   display: flex;
+}
+.navbar-links span {
+  color: #FFFFFF;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 2.7px;
+  margin-right: 12px;
+}
+@media screen and (min-width: 501px) {
+  .navbar-links span {
+    display: none;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .navbar-links span {
+    display: inline;
+    font-weight: bold;
+  }
 }
 @media screen and (min-width: 501px) {
   .navbar-links {
@@ -101,38 +133,10 @@
     width: 830px;
   }
   .navbar-links > * {
+    cursor: pointer;
     font-size: 16px;
     line-height: 19px;
     letter-spacing: 2.7px;
-  }
-}
-.navbar-links span {
-  color: #FFFFFF;
-  font-family: "Barlow Condensed", sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 19px;
-  letter-spacing: 2.7px;
-  margin-right: 12px;
-}
-@media screen and (min-width: 501px) {
-  .navbar-links span {
-    display: none;
-  }
-}
-@media screen and (min-width: 1000px) {
-  .navbar-links span {
-    display: inline;
-    font-weight: bold;
-  }
-}
-.navbar-links .active {
-  border-right: 3px solid #FFFFFF;
-}
-@media screen and (min-width: 501px) {
-  .navbar-links .active {
-    border: 0px;
-    border-bottom: 3px solid #FFFFFF;
   }
 }
 .navbar-hamburger {
@@ -297,6 +301,7 @@
     width: 274px;
     height: 274px;
     padding: 119px 64px 118px 62px;
+    cursor: pointer;
   }
 }
 
@@ -422,7 +427,7 @@
     height: 472px;
   }
 }
-.destination-info-text-links {
+.destination-info-text-nav {
   display: flex;
   justify-content: space-between;
   width: 237.5px;
@@ -430,33 +435,40 @@
   margin: 26px auto 20px;
 }
 @media screen and (min-width: 501px) {
-  .destination-info-text-links {
+  .destination-info-text-nav {
     width: 285.5px;
     height: 34px;
     margin: 53px auto 32px;
   }
 }
 @media screen and (min-width: 1000px) {
-  .destination-info-text-links {
+  .destination-info-text-nav {
     width: 285.5px;
     height: 34px;
     margin: 0 0 37px;
   }
 }
-.destination-info-text-links > * {
-  text-decoration: none;
+.destination-info-text-nav-link {
   font-family: "Barlow Condensed", sans-serif;
   font-size: 14px;
   line-height: 17px;
   letter-spacing: 2.3625px;
   color: #D0D6F9;
   text-transform: uppercase;
+  cursor: pointer;
 }
-.destination-info-text-links > *.active {
+.destination-info-text-nav-link.active {
   color: #FFFFFF;
+  border-bottom: 3px solid #FFFFFF;
+}
+.destination-info-text-nav-link:hover {
+  border-bottom: 3px solid #ffffff50;
+}
+.destination-info-text-nav-link:hover.active {
+  border-bottom: 3px solid #FFFFFF;
 }
 @media screen and (min-width: 501px) {
-  .destination-info-text-links > * {
+  .destination-info-text-nav-link {
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
@@ -781,22 +793,23 @@
     margin: 0 auto 95px 165px;
   }
 }
-.grid-crew-nav button {
+.grid-crew-nav-button {
   width: 10px;
   height: 10px;
   border-radius: 10px;
   border: none;
   background: #FFFFFF;
   opacity: 0.17;
+  cursor: pointer;
 }
-.grid-crew-nav button span {
+.grid-crew-nav-button span {
   display: none;
 }
-.grid-crew-nav button.active {
+.grid-crew-nav-button:nth-child(1) {
   opacity: 1;
 }
 @media screen and (min-width: 1000px) {
-  .grid-crew-nav button {
+  .grid-crew-nav-button {
     width: 15px;
     height: 15px;
     border-radius: 15px;
@@ -1006,7 +1019,7 @@
     height: 336px;
   }
 }
-.grid-tech-nav button {
+.grid-tech-nav-button {
   width: 40px;
   height: 40px;
   border-radius: 40px;
@@ -1019,9 +1032,17 @@
   line-height: 18px;
   text-align: center;
   letter-spacing: 1px;
+  cursor: pointer;
+}
+.grid-tech-nav-button.active {
+  background-color: #FFFFFF;
+  color: #0B0D17;
+}
+.grid-tech-nav-button:hover {
+  border: 1px solid #FFFFFF;
 }
 @media screen and (min-width: 501px) {
-  .grid-tech-nav button {
+  .grid-tech-nav-button {
     width: 60px;
     height: 60px;
     border-radius: 60px;
@@ -1031,7 +1052,7 @@
   }
 }
 @media screen and (min-width: 1000px) {
-  .grid-tech-nav button {
+  .grid-tech-nav-button {
     width: 80px;
     height: 80px;
     border-radius: 80px;
@@ -1041,7 +1062,7 @@
     letter-spacing: 2px;
   }
 }
-.grid-tech-nav button.active {
+.grid-tech-nav-button.active {
   color: #0B0D17;
   background-color: #FFFFFF;
 }
