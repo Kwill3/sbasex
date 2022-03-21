@@ -11,7 +11,7 @@ function Navbar() {
 
     return (
         <div className='navbar'>
-            <div className="navbar-logo" onClick={handleClick}>
+            <div className="navbar-logo">
                 <img src="./assets/shared/logo.svg" alt="logo" />
             </div>
             <div className="navbar-line"></div>
@@ -37,7 +37,7 @@ function Navbar() {
                 </NavLink>
             </div>
             <div className="navbar-hamburger">
-                <img src="./assets/shared/icon-hamburger.svg" alt="hamburger" />
+                <img onClick={handleClick} src="./assets/shared/icon-hamburger.svg" alt="hamburger" />
             </div>
         </div>
     )

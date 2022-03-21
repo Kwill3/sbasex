@@ -356,6 +356,7 @@
 @media screen and (min-width: 1000px) {
   .dest-bg {
     min-height: 900px;
+    min-width: 1140px;
     background-image: url("../../public/assets/destination/background-destination-desktop.jpg");
   }
 }
@@ -422,8 +423,8 @@
 }
 @media screen and (min-width: 1000px) {
   .destination-info-picture {
-    margin: 33px 0 0 230px;
-    justify-content: left;
+    margin: 33px 157px 0 0;
+    justify-content: right;
   }
 }
 .destination-info-picture img {
@@ -438,14 +439,15 @@
 }
 @media screen and (min-width: 1000px) {
   .destination-info-picture img {
-    width: 445px;
-    height: 445px;
+    min-width: 445px;
+    width: 30.9vw;
+    height: auto;
   }
 }
 @media screen and (min-width: 1000px) {
   .destination-info-text {
     flex: auto;
-    width: 445px;
+    width: 30.9vw;
     height: 472px;
   }
 }
@@ -545,7 +547,7 @@
 @media screen and (min-width: 1000px) {
   .destination-info-text-desc {
     justify-content: left;
-    width: 445px;
+    width: 30.9vw;
     font-size: 18px;
     line-height: 32px;
     text-align: left;

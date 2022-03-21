@@ -28,6 +28,7 @@
     }
     @include desktop {
         min-height: 900px;
+        min-width: 1140px;
         background-image: url('../../public/assets/destination/background-destination-desktop.jpg');
     }
 }
@@ -82,8 +83,8 @@
             justify-content: center;
             margin: 0 auto;
             @include desktop {
-                margin: 33px 0 0 230px;
-                justify-content: left;
+                margin: 33px 157px 0 0;
+                justify-content: right;
             }
             & img {
                 width: 170px;
@@ -93,15 +94,16 @@
                     height: 300px;
                 }
                 @include desktop {
-                    width: 445px;
-                    height: 445px;
+                    min-width: 445px;
+                    width: 30.9vw;
+                    height: auto;
                 }
             }
         }
         &-text {
             @include desktop {
                 flex: auto;
-                width: 445px;
+                width: 30.9vw;
                 height: 472px;
             }
             &-nav {
@@ -186,7 +188,7 @@
                 }
                 @include desktop {
                     justify-content: left;
-                    width: 445px;
+                    width: 30.9vw;
                     font-size: 18px;
                     line-height: $heading4-size;
                     text-align: left;
