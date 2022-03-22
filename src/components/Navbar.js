@@ -12,7 +12,7 @@ function Navbar() {
     return (
         <div className='navbar'>
             <div className="navbar-logo">
-                <a href="/">
+                <a href="/sbasex/">
                     <img src="./assets/shared/logo.svg" alt="logo" />
                 </a>
             </div>
@@ -21,19 +21,19 @@ function Navbar() {
                 <div className="navbar-links-close" onClick={handleClick}>
                     <img src="./assets/shared/icon-close.svg" alt="close" />
                 </div>
-                <NavLink className={activeNav} onClick={handleClick} to="/">
+                <NavLink className={activeNav} onClick={handleClick} to="/sbasex/">
                     <span>00</span>
                     HOME
                 </NavLink>
-                <NavLink className={activeNav} onClick={handleClick} to="/destination">
+                <NavLink className={activeNav} onClick={handleClick} to="/sbasex/destination">
                     <span>01</span>
                     DESTINATION
                 </NavLink>
-                <NavLink className={activeNav} onClick={handleClick} to="/crew">
+                <NavLink className={activeNav} onClick={handleClick} to="/sbasex/crew">
                     <span>02</span>
                     CREW
                 </NavLink>
-                <NavLink className={activeNav} onClick={handleClick} to="/technology">
+                <NavLink className={activeNav} onClick={handleClick} to="/sbasex/technology">
                     <span>03</span>
                     TECHNOLOGY
                 </NavLink>

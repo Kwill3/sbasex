@@ -12,12 +12,12 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='destination' element={<Destination />} />
-          <Route path='crew' element={<Crew />} />
-          <Route path='technology' element={<Technology />} />
+          <Route path='/sbasex/' element={<Home />} />
+          <Route path='/sbasex/destination' element={<Destination />} />
+          <Route path='/sbasex/crew' element={<Crew />} />
+          <Route path='/sbasex/technology' element={<Technology />} />
           <Route 
-            path='*' 
+            path='/sbasex/*' 
             element={
               <main style={{ color: "white" }}>
                 <p>404 Page Not Found</p>
