@@ -71,8 +71,8 @@
             text-decoration: none;
             font-weight: 400;
             font-size: $nav-text-size;
-            line-height: 19px;
-            letter-spacing: 2.7px;
+            line-height: $nav-text-line;
+            letter-spacing: $nav-text-space;
             margin: 0 0 32px 32px;
         }
         &-close {
@@ -89,7 +89,7 @@
             font-family: $heading-barcon;
             font-weight: 700;
             font-size: $nav-text-size;
-            line-height: 19px;
+            line-height: $nav-text-line;
             letter-spacing: $nav-text-space;
             margin-right: 12px;
             @include tablet {
@@ -110,8 +110,8 @@
             height: 96px;
             & > * {
                 font-size: $subheading2-size;
-                line-height: 17px;
-                letter-spacing: 2.3625px;
+                line-height: $subheading2-line;
+                letter-spacing: $subheading2-space;
                 margin: 0;
             }
         }
@@ -121,7 +121,7 @@
             & > * {
                 cursor: pointer;
                 font-size: $nav-text-size;
-                line-height: 19px;
+                line-height: $nav-text-line;
                 letter-spacing: $nav-text-space;
             }
         }

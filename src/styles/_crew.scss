@@ -62,22 +62,22 @@
         grid-area: header;
         margin: 88px auto 0 auto;
         font-family: $heading-barcon;
-        font-size: $nav-text-size;
         color: $light;
-        line-height: 19px;
-        letter-spacing: $nav-text-space;
+        font-size: $header-mobile-size;
+        line-height: $header-mobile-line;
+        letter-spacing: $header-mobile-space;
         @include tablet {
             margin: 136px auto 60px 38.5px;
-            font-size: 20px;
-            line-height: 24px;
-            letter-spacing: 3.375px;
+            font-size: $header-tablet-size;
+            line-height: $header-tablet-line;
+            letter-spacing: $header-tablet-space;
         }
         @include desktop {
             margin: 212px auto 154px 165px;
             height: 20.89%;
-            font-size: $heading5-size;
-            line-height: 34px;
-            letter-spacing: 4.725px;
+            font-size: $header-desktop-size;
+            line-height: $header-desktop-line;
+            letter-spacing: $header-desktop-space;
         }
         & span {
             opacity: 0.25;
@@ -165,49 +165,49 @@
             margin: 0 auto 120px 165px;
         }
         &-role {
-            font-size: $nav-text-size;
+            font-size: 16px;
             line-height: 18px;
             opacity: 0.5;
             margin-bottom: 8px;
             text-transform: uppercase;
             @include tablet {
                 font-size: 24px;
-                line-height: $heading5-size;
+                line-height: 28px;
             }
             @include desktop {
-                font-size: $heading4-size;
+                font-size: 32px;
                 line-height: 37px;
                 margin-bottom: 15px;
             }
         }
         &-name {
-            font-size: 24px;
-            line-height: $heading5-size;
+            font-size: $heading6-size;
+            line-height: $heading6-line;
             margin-bottom: 16px;
             text-transform: uppercase;
             @include tablet {
-                font-size: 40px;
-                line-height: 46px;
+                font-size: $heading4-size;
+                line-height: $heading4-line;
             }
             @include desktop {
                 font-size: $heading3-size;
-                line-height: 64px;
+                line-height: $heading3-space;
                 margin-bottom: 27px;
             }
         }
         &-bio {
             font-family: $heading-bar;
-            font-size: 15px;
-            line-height: 25px;
+            font-size: $para-mobile-size;
+            line-height: $para-mobile-line;
             color: $blue;
             @include tablet {
-                font-size: $nav-text-size;
-                line-height: $heading5-size;
+                font-size: $para-tablet-size;
+                line-height: $para-tablet-line;
             }
             @include desktop {
                 max-width: 444px;
-                font-size: 18px;
-                line-height: $heading4-size;
+                font-size: $para-desktop-size;
+                line-height: $para-desktop-line;
             }
         }
     }

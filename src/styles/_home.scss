@@ -42,22 +42,22 @@
             flex-direction: column;
             color: $blue;
             font-family: $heading-barcon;
-            font-size: $nav-text-size;
-            line-height: 19px;
+            font-size: $header-mobile-size;
+            line-height: $header-mobile-line;
+            letter-spacing: $header-mobile-space;
             text-align: center;
-            letter-spacing: $nav-text-space;
             margin: 112px 24px 0 24px;
             @include tablet {
                 width: 450px;
                 margin: 202px auto 0 auto;
-                font-size: 20px;
-                line-height: 24px;
-                letter-spacing: 3.375px;
+                font-size: $header-tablet-size;
+                line-height: $header-tablet-line;
+                letter-spacing: $header-tablet-space;
             }
             @include desktop {
-                font-size: $heading5-size;
-                line-height: 34px;
-                letter-spacing: 4.725px;
+                font-size: $header-desktop-size;
+                line-height: $header-desktop-line;
+                letter-spacing: $header-desktop-space;
                 text-align: left;
                 margin: 0;
             }
@@ -83,19 +83,19 @@
         & h2 {
             color: $blue;
             font-family: $heading-bar;
-            font-size: 15px;
-            line-height: 25px;
+            font-size: $para-mobile-size;
+            line-height: $para-mobile-line;
             text-align: center;
             margin: 0 24px 81px 24px;
             @include tablet {
                 width: 450px;
-                font-size: $nav-text-size;
-                line-height: $heading5-size;
+                font-size: $para-tablet-size;
+                line-height: $para-tablet-line;
                 margin: 0 auto 156px auto;
             }
             @include desktop {
-                font-size: 18px;
-                line-height: 32px;
+                font-size: $para-desktop-size;
+                line-height: $para-desktop-line;
                 text-align: left;
                 margin: 0;
             }
@@ -135,9 +135,9 @@
                 width: 242px;
                 height: 242px;
                 padding: 103px 48px 102px 46px;
-                font-size: $heading4-size;
-                line-height: 37px;
-                letter-spacing: 2px;
+                font-size: $button-text-size;
+                line-height: $button-text-line;
+                letter-spacing: $button-text-space;
                 border: none;
                 border-radius: 242px;
                 filter: none;

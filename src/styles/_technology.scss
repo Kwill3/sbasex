@@ -52,21 +52,21 @@
         margin: 88px auto 32px;
         text-align: center;
         font-family: $heading-barcon;
-        font-size: $nav-text-size;
-        line-height: 19px;
-        letter-spacing: $nav-text-space;
+        font-size: $header-mobile-size;
+        line-height: $header-mobile-line;
+        letter-spacing: $header-mobile-space;
         color: $light;
         @include tablet {
             margin: 136px auto 60px 38.5px;
-            font-size: 20px;
-            line-height: 24px;
-            letter-spacing: 3.375px;
+            font-size: $header-tablet-size;
+            line-height: $header-tablet-line;
+            letter-spacing: $header-tablet-space;
         }
         @include desktop {
             margin: 212px auto 26px 166px;
-            font-size: $heading5-size;
-            line-height: 34px;
-            letter-spacing: 4.725px;
+            font-size: $header-desktop-size;
+            line-height: $header-desktop-line;
+            letter-spacing: $header-desktop-space;
         }
         & span {
             font-weight: bold;
@@ -144,9 +144,9 @@
                 height: 80px;
                 border-radius: 80px;
                 margin: 16px 0;
-                font-size: $heading4-size;
-                line-height: 37px;
-                letter-spacing: 2px;
+                font-size: $button-text-size;
+                line-height: $button-text-line;
+                letter-spacing: $button-text-space;
             }
             &.active {
                 color: $dark;
@@ -171,13 +171,13 @@
         }
         &-title {
             font-family: $heading-barcon;
-            font-size: 14px;
-            line-height: 17px;
-            letter-spacing: 2.3625px;
+            font-size: $subheading2-size;
+            line-height: $subheading2-line;
+            letter-spacing: $subheading2-space;
             margin-bottom: 9px;
             @include tablet {
-                font-size: 16px;
-                line-height: 19px;
+                font-size: $nav-text-size;
+                line-height: $nav-text-line;
                 letter-spacing: $nav-text-space;
                 margin-bottom: 16px;
             }
@@ -187,32 +187,32 @@
         }
         &-name {
             font-family: $heading-bell;
-            font-size: 24px;
-            line-height: 28px;
+            font-size: $heading6-size;
+            line-height: $heading6-line;
             text-transform: uppercase;
             color: $light;
             margin-bottom: 16px;
             @include tablet {
-                font-size: 40px;
-                line-height: 46px;
+                font-size: $heading4-size;
+                line-height: $heading4-line;
             }
             @include desktop {
                 font-size: $heading3-size;
-                line-height: 64px;
+                line-height: $heading3-space;
                 margin-bottom: 17px;
             }
         }
         &-desc {
             font-family: $heading-bar;
-            font-size: 15px;
-            line-height: 25px;
+            font-size: $para-mobile-size;
+            line-height: $para-mobile-line;
             @include tablet {
-                font-size: $nav-text-size;
-                line-height: $heading5-size;
+                font-size: $para-tablet-size;
+                line-height: $para-tablet-line;
             }
             @include desktop {
-                font-size: 18px;
-                line-height: $heading4-size;
+                font-size: $para-desktop-size;
+                line-height: $para-desktop-line;
             }
         }
     }

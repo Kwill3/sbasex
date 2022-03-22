@@ -199,8 +199,8 @@
   font-family: "Barlow Condensed", sans-serif;
   font-size: 16px;
   line-height: 19px;
-  text-align: center;
   letter-spacing: 2.7px;
+  text-align: center;
   margin: 112px 24px 0 24px;
 }
 @media screen and (min-width: 501px) {
@@ -730,8 +730,8 @@
   grid-area: header;
   margin: 88px auto 0 auto;
   font-family: "Barlow Condensed", sans-serif;
-  font-size: 16px;
   color: #FFFFFF;
+  font-size: 16px;
   line-height: 19px;
   letter-spacing: 2.7px;
 }

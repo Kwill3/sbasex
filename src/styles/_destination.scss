@@ -41,23 +41,23 @@
     &-header {
         margin: 88px auto 32px;
         font-family: $heading-barcon;
-        font-size: $nav-text-size;
-        line-height: 19px;
-        letter-spacing: 2.7px;
+        font-size: $header-mobile-size;
+        line-height: $header-mobile-line;
+        letter-spacing: $header-mobile-space;
         text-transform: uppercase;
         color: $light;
         @include tablet {
             margin: 136px auto 60px 38.5px;
             font-weight: 400;
-            font-size: 20px;
-            line-height: 24px;
-            letter-spacing: 3.375px;
+            font-size: $header-tablet-size;
+            line-height: $header-tablet-line;
+            letter-spacing: $header-tablet-space;
         }
         @include desktop {
             margin: 212px auto 64px 166.5px;
-            font-size: $heading5-size;
-            line-height: 34px;
-            letter-spacing: 4.725px;
+            font-size: $header-desktop-size;
+            line-height: $header-desktop-line;
+            letter-spacing: $header-desktop-space;
         }
         & span {
             font-weight: bold;
@@ -124,9 +124,9 @@
                 }
                 &-link {
                     font-family: $heading-barcon;
-                    font-size: 14px;
-                    line-height: 17px;
-                    letter-spacing: 2.3625px;
+                    font-size: $subheading2-size;
+                    line-height: $subheading2-line;
+                    letter-spacing: $subheading2-space;
                     color: $blue;
                     text-transform: uppercase;
                     cursor: pointer;
@@ -143,7 +143,7 @@
                     @include tablet {
                         font-weight: 400;
                         font-size: $nav-text-size;
-                        line-height: 19px;
+                        line-height: $nav-text-line;
                         letter-spacing: $nav-text-space;
                     }
                 }
@@ -153,7 +153,7 @@
                 justify-content: center;
                 font-family: $heading-bell;
                 font-size: $heading3-size;
-                line-height: 64px;
+                line-height: $heading3-space;
                 text-align: center;
                 text-transform: uppercase;
                 color: $light;
@@ -165,7 +165,7 @@
                 @include desktop {
                     justify-content: left;
                     font-size: $heading2-size;
-                    line-height: 115px;
+                    line-height: $heading2-line;
                     text-align: left;
                 }
             }
@@ -174,23 +174,23 @@
                 justify-content: center;
                 width: 87.2%;
                 font-family: $heading-bar;
-                font-size: 15px;
-                line-height: 25px;
+                font-size: $para-mobile-size;
+                line-height: $para-mobile-line;
                 text-align: center;
                 color: $blue;
                 margin: 1px auto 32px;
                 @include tablet {
                     width: 74.6%;
                     font-weight: 400;
-                    font-size: $nav-text-size;
-                    line-height: $subheading1-size;
+                    font-size: $para-tablet-size;
+                    line-height: $para-tablet-line;
                     margin: 8px auto 49px;
                 }
                 @include desktop {
                     justify-content: left;
                     width: 30.9vw;
-                    font-size: 18px;
-                    line-height: $heading4-size;
+                    font-size: $para-desktop-size;
+                    line-height: $para-desktop-line;
                     text-align: left;
                     margin: 14px auto 54px 0;
                 }
@@ -237,9 +237,9 @@
                     }
                     & h5 {
                         font-family: $heading-barcon;
-                        font-size: 14px;
-                        line-height: 17px;
-                        letter-spacing: 2.3625px;
+                        font-size: $subheading2-size;
+                        line-height: $subheading2-line;
+                        letter-spacing: $subheading2-space;
                         color: $blue;
                         margin-bottom: 12px;
                         @include tablet {
@@ -249,7 +249,7 @@
                     & p {
                         font-family: $heading-bell;
                         font-size: $heading5-size;
-                        line-height: $heading4-size;
+                        line-height: $heading5-line;
                         @include tablet {
                             font-weight: 400;
                         }
@@ -270,9 +270,9 @@
                     }
                     & h5 {
                         font-family: $heading-barcon;
-                        font-size: 14px;
-                        line-height: 17px;
-                        letter-spacing: 2.3625px;
+                        font-size: $subheading2-size;
+                        line-height: $subheading2-line;
+                        letter-spacing: $subheading2-space;
                         color: $blue;
                         margin-bottom: 12px;
                         @include tablet {
@@ -282,7 +282,7 @@
                     & p {
                         font-family: $heading-bell;
                         font-size: $heading5-size;
-                        line-height: $heading4-size;
+                        line-height: $heading5-line;
                         @include tablet {
                             font-weight: 400;
                         }
