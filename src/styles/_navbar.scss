@@ -24,14 +24,16 @@
 
     &-logo {
         flex: auto;
-        & img {
-            height: 40px;
-            width: 40px;
-            margin: 24px 0 0 24px;
-            @include tablet {
-                height: 48px;
-                width: 48px;
-                margin: 0;
+        & a {
+            & img {
+                height: 40px;
+                width: 40px;
+                margin: 24px 0 0 24px;
+                @include tablet {
+                    height: 48px;
+                    width: 48px;
+                    margin: 0;
+                }
             }
         }
     }

@@ -12,7 +12,9 @@ function Navbar() {
     return (
         <div className='navbar'>
             <div className="navbar-logo">
-                <img src="./assets/shared/logo.svg" alt="logo" />
+                <a href="/">
+                    <img src="./assets/shared/logo.svg" alt="logo" />
+                </a>
             </div>
             <div className="navbar-line"></div>
             <div className="navbar-links">
